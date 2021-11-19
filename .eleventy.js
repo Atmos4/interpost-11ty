@@ -20,6 +20,7 @@ module.exports = function(eleventyConfig) {
       dir: {
         input: "src",
         output: "public"
-      }
+      },
+      passthroughFileCopy: true
     };
   }
