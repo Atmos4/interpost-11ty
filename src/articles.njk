@@ -1,0 +1,31 @@
+---
+title: Articles
+layout: 'base.njk'
+pagination:
+  data: collections.post
+  size: 9
+  alias: posts
+  reverse: true
+---
+<div id = "pagination">
+    {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}">
+            <i class="fa fa-chevron-left"></i>
+        </a>{% else %}<a disabled><i class="fa fa-chevron-left"></i></a>{% endif %}
+    {%- for pageEntry in pagination.pages %}
+        <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a>
+    {%- endfor %}
+    {% if pagination.href.next %}<a href="{{ pagination.href.next }}"><i class="fa fa-chevron-right"></i></a>{% else %}<a disabled><i class="fa fa-chevron-right"></i></a>{% endif %}
+</div>
+<div id="features-wrapper">
+    <div class="container">
+			<div class="row">
+                {%- for post in posts -%}
+                    {% set bClass="col-4 col-12-medium" %}
+                    {% set imageType="featured" %}       
+                    {% include 'article-card.njk' %}
+                {%- endfor %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+{# Variables à définir: bClass, sClass et imageType #}
+
+<div class="{{bClass}}">
+    <section class="box feature {{sClass}}">
+        <a href="{{post.url}}">
+            <div class="image {{imageType}}"><img src="{{ post.data.image }}"/>
+            </div>
+            <div class="inner">
+                <header>
+                    <h2>{{ post.data.title }}</h2>
+                </header>
+                <p>{{ post.data.description }}</p>
+            </div>
+        </a>
+    </section>
+</div>

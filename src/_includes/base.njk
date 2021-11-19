@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<!-- Design : Verti by HTML5UP Dev : Atmos4 for INTERPOST -->
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta
+            name="description"
+            content="Interpost.fr : un média d'information français tenu par une équipe de passionés - Le meilleur de la course
+                d'orientation française et internationale en continu ! Avant-courses, Débriefings, Analyses, Interviews, News, restez
+                toujours au point sur les news de la CO"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="/assets/css/main.css"/>
+    </head>
+    <body class="is-preload homepage">
+        <div id="fb-root"></div>
+        {% include 'header.njk' %}
+        <div id="page-wrapper">
+            {{ content | safe }}
+        </div>
+        {% include 'footer.njk' %}
+
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/jquery.dropotron.min.js"></script>
+        <script src="/assets/js/browser.min.js"></script>
+        <script src="/assets/js/breakpoints.min.js"></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/all.js#xfbml=1&version=v4.0"></script>
+        
+        <script src="/assets/js/util.js"></script>
+        <script src="/assets/js/main.js"></script>
+    </body>
+</html>

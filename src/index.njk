@@ -1,0 +1,35 @@
+---
+title: Interpost
+layout: 'base.njk'
+---
+
+<div id="features-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 col-12-medium">
+                <div class="row">
+                    {% for post in collections.post | reverse | limit(3) %}
+                        {% if loop.index0 == 0 %}
+                            {% set bClass="col-12" %}
+                            {% set sClass="flex" %}
+                            {% set imageType="wide" %}
+                            {% include 'article-card.njk' %}
+                        {% else %}
+                            {% set bClass="col-6 col-12-medium" %}
+                            {% set imageType="featured" %}
+                            {% include 'article-card.njk' %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-4 col-12-medium">
+                <div class="fb-column">
+
+                    <!-- Facebook plugin -->
+                    <div class="fb-page" data-href="https://www.facebook.com/Interpostorientation/" data-tabs="timeline" data-width="500" data-small-header="true" data-adapt-container-width="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/Interpostorientation/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Interpostorientation/">Interpost</a></blockquote></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

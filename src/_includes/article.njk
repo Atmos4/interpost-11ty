@@ -1,0 +1,18 @@
+--- 
+layout : 'base.njk' 
+---
+
+<div id="article-wrapper">
+    <div id="content">
+        <article>
+            <div id="article-banner" style="background-image: url({{image}});">
+                <div id="article-title">
+                    <h2> {{ title }}</h2>
+                    <h4> {{ description }}</h4>
+                    <p id="writer-infos">Par {{ author }}, le {{ date | postDate }}</p>
+                </div>
+            </div>
+            <div id="article-content"> {{ content | safe }} </div>
+        </article>
+    </div>
+</div>
